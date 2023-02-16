@@ -9,7 +9,7 @@ do
 	echo '/**'>>$file
     echo ' * main - is the entry point for program'>>$file
 	echo ' *'>>$file
-    echo ' * Return: 0 if compilation is successful. 1 otherwise'>>$file
+    echo ' * Return: 0 if compilation is successful'>>$file
 	echo ' */'>>$file   
 	echo "">>$file
 	echo 'int main(void)'>>$file
