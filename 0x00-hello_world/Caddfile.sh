@@ -14,7 +14,7 @@ do
 	echo "">>$file
 	echo 'int main(void)'>>$file
 	echo '{'>>$file
-	echo '        printf("Hello World!");'>>$file
-	echo '        return (0);'>>$file
+	echo '	printf("Hello World!");'>>$file
+	echo '	return (0);'>>$file
 	echo '}'>>$file
 done
