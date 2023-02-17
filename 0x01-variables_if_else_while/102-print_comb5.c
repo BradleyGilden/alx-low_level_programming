@@ -18,7 +18,7 @@ int main(void)
 			{
 				for (i = 48; i <= 57; i++)
 				{
-					if (((i > k && j >= z) && (z != k && j == i)) || (j != i && z == k))
+					if ((i >= k && j >= z) && (j != k || j != z || j != i))
 					{
 						putchar(z);
 						putchar(k);
