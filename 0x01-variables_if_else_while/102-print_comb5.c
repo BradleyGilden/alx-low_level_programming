@@ -8,37 +8,23 @@
 
 int main(void)
 {
-	int i, j, k, z;
+	int i, j;
 
-	for (z = 48; z <= 57; z++)
+	for (i = 0; i <= 98; i++)
 	{
-		for (k = 48; k <= 57; k++)
+		for (j = i + 1; j <= 99; j++)
 		{
-			for (j = 48; j <= 57; j++)
-			{
-				for (i = 48; i <= 57; i++)
-				{
-					if ((i >= k && j >= z) && (j != k || j != z || j != i))
-					{
-						putchar(z);
-						putchar(k);
-						putchar(' ');
-						putchar(j);
-						putchar(i);
-					if (i == 57 && j == 57 && k == 56 && z == 57)
-					{
-						return (0);
-					}
-						putchar(',');
-						putchar(' ');
-					}
-}
-}
-}
-}
-
-
+			putchar(i / 10 + 48);
+			putchar(i % 10 + 48);
+			putchar(' ');
+			putchar(j / 10 + 48);
+			putchar(j % 10 + 48);
+			if (i == 98 && j == 99)
+				break;
+			putchar(',');
+			putchar(' ');
+		}
+	}
 	putchar('\n');
-
 	return (0);
 }
