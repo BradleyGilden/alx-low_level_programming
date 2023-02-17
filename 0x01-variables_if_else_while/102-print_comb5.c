@@ -8,6 +8,37 @@
 
 int main(void)
 {
-	printf("Hello World!");
+	int i, j, k, z;
+
+	for (z = 48; z <= 57; z++)
+	{
+		for (k = 48; k <= 57; k++)
+		{
+			for (j = 48; j <= 57; j++)
+			{
+				for (i = 48; i <= 57; i++)
+				{
+					if (i > k && j >= z)
+					{
+						putchar(z);
+						putchar(k);
+						putchar(' ');
+						putchar(j);
+						putchar(i);
+					if (i == 57 && j == 57 && k == 56 && z == 57)
+					{
+						return (0);
+					}
+						putchar(',');
+						putchar(' ');
+					}
+}
+}
+}
+}
+
+
+	putchar('\n');
+
 	return (0);
 }
