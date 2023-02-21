@@ -1,13 +1,25 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - is the entry point for program
+ * print_last_digit - return last digit
+ * @x: int number argument
  *
- * Return: 0 if compilation is successful
+ * Return: last digit
  */
 
-int main(void)
+int print_last_digit(int x)
 {
-	printf("Hello World!");
-	return (0);
+	int last;
+
+	if (x < 0)
+	{
+		x = -x;
+		last = x % 10;
+		return (last);
+	}
+	else
+	{
+		last = x % 10;
+		return (last);
+	}
 }
