@@ -13,6 +13,7 @@ int main(void)
 	long int count;
 
 	j = 0;
+	count = 0;
 
 	for (i = 1; i < 51; i++)
 	{
@@ -24,7 +25,7 @@ int main(void)
 	}
 	for (i = 0; arr[i] < 4000000; i++)
 	{
-		if (arr[i] / 2 == 0)
+		if (arr[i] % 2 == 0)
 			count += arr[i];
 	}
 	printf("%ld\n", count);
