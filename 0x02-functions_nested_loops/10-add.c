@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - is the entry point for program
+ *  add - adds two integers
+ *  @x: a single integer
+ *  @y: a single integer
  *
- * Return: 0 if compilation is successful
+ *  Return: the sum of 2 integers
  */
 
-int main(void)
+int add(int x, int y)
 {
-	printf("Hello World!");
-	return (0);
+	return (x + y);
 }

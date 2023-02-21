@@ -1,13 +1,16 @@
 #include <stdio.h>
 
 /**
- * main - is the entry point for program
+ * _islower - is the entry point for program
+ * @c: integer ascii value
  *
- * Return: 0 if compilation is successful
+ * Return: 1 if letter is lowercase, 0 otherwise
  */
 
-int main(void)
+int _islower(int c)
 {
-	printf("Hello World!");
-	return (0);
+	if (c >= 97 && c <= 122)
+		return (1);
+	else
+		return (0);
 }
