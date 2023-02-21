@@ -1,13 +1,27 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - is the entry point for program
- *
- * Return: 0 if compilation is successful
+ * print_sign - is the entry point for program
+ * @n: input integer to be compared
+ * Return: 1 n is positive, 0 if n is 0, -1 if n is negative
  */
 
-int main(void)
+int print_sign(int n)
 {
-	printf("Hello World!");
-	return (0);
+	if (n > 0)
+	{
+		_putchar('+');
+		return (1);
+	}
+	else if (n == 0)
+	{
+		_putchar('0');
+		return (0);
+	}
+	else
+	{
+		_putchar('-');
+		return (-1);
+	}
+
 }
