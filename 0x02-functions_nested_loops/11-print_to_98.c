@@ -1,13 +1,35 @@
 #include <stdio.h>
 
 /**
- * main - is the entry point for program
+ * print_to_98 - print entered num to 98
+ * @n: integer entered
  *
- * Return: 0 if compilation is successful
  */
 
-int main(void)
+void print_to_98(int n)
 {
-	printf("Hello World!");
-	return (0);
+	int i;
+
+	if (n <= 98)
+	{
+		for (i = n; i <= 98; i++)
+		{
+			if (i == 98)
+				printf("%d", i);
+			else
+				printf("%d, ", i);
+		}
+		printf("\n");
+	}
+	else
+	{
+		for (i = n; i >= 98; i--)
+		{
+			if (i == 98)
+				printf("%d", i);
+			else
+				printf("%d, ", i);
+		}
+		printf("\n");
+	}
 }
