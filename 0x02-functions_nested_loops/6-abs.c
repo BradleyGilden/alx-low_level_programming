@@ -1,13 +1,16 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - is the entry point for program
+ * _abs - computes absolute value
+ * @x: integer argument for _abs
  *
- * Return: 0 if compilation is successful
+ * Return: return absolute value
  */
 
-int main(void)
+int _abs(int x)
 {
-	printf("Hello World!");
-	return (0);
+	if (x >= 0)
+		return (x);
+	else
+		return (-x);
 }
