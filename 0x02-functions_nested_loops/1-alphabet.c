@@ -1,13 +1,16 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - is the entry point for program
- *
- * Return: 0 if compilation is successful
+ * print_alphabet - prints alphabet in lowercase
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	printf("Hello World!");
-	return (0);
+	int i;
+
+	for (i = 97; i < 122; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n');
 }
