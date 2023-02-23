@@ -1,12 +1,20 @@
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Return: 0 always
+ * print_square - print_square
+ * @size: size of square
  */
 
-int main(void)
+void print_square(int size)
 {
-	return (0);
+	int i, j;
+
+	for (i = 0; i < size; i++)
+	{
+		for (j = 0; j < size; j++)
+		{
+			_putchar('#');
+		}
+		_putchar('\n');
+	}
 }
