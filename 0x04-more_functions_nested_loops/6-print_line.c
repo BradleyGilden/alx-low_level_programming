@@ -1,12 +1,18 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Return: 0 always
+ * print_line - entry point
+ * @n: integer input
  */
 
-int main(void)
+void print_line(int n)
 {
-	return (0);
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		_putchar('_');
+	}
+	_putchar('\n');
 }
