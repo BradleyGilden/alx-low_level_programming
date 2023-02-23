@@ -1,12 +1,15 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - entry point
+ * mul - multiplies inputs
+ * @a: int input to be multiplied
+ * @b: int input to be multiplied
  *
- * Return: 0 always
+ * Return: multiplied value
  */
 
-int main(void)
+int mul(int a, int b)
 {
-	return (0);
+	return (a * b);
 }
