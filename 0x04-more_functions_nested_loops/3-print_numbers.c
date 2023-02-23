@@ -1,12 +1,17 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Return: 0 always
+ * print_numbers - entry point
  */
 
-int main(void)
+void print_numbers(void)
 {
-	return (0);
+	int i;
+
+	for (i = '0'; i <= '9'; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n');
 }
