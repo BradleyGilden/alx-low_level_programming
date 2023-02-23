@@ -1,12 +1,17 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - entry point
+ * _isdigit - checks for digit
+ * @c: input char to be checked
  *
- * Return: 0 always
+ * Return: 1 if it is a digit, 0 otherwise
  */
 
-int main(void)
+int _isdigit(int c)
 {
-	return (0);
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }
