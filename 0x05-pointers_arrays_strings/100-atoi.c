@@ -20,6 +20,13 @@ int _atoi(char *s)
 
 		if (end > 0 && s[i] == ' ')
 			break;
+		if (value > INT_MAX / 10 || (value == INT_MAX / 10 && s[i] - '0' > 7))
+		{
+			if (sign == 1)
+				return (INT_MAX);
+			else
+				return (INT_MIN);
+		}
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 
@@ -28,10 +35,6 @@ int _atoi(char *s)
 		}
 
 	}
-	if (value > INT_MAX / 10)
-		return (INT_MAX);
-	if (value < INT_MIN / 10)
-		return (INT_MIN);
 	value = value * sign;
 	return (value);
 }
