@@ -1,12 +1,17 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Return: 0 always
+ * _puts - mimics the C puts function
+ * @str: pointer to first element of string array
  */
 
-int main(void)
+void _puts(char *str)
 {
-	return (0);
+	while (*str != '\0')
+	{
+		_putchar(*str);
+		str += 1;
+	}
+	_putchar('\n');
 }
