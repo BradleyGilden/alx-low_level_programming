@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 #include "main.h"
 
 /**
@@ -27,6 +28,10 @@ int _atoi(char *s)
 		}
 
 	}
+	if (value > INT_MAX / 10)
+		return (INT_MAX);
+	if (value < INT_MIN / 10)
+		return (INT_MIN);
 	value = value * sign;
 	return (value);
 }
