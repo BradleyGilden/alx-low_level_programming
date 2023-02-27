@@ -20,7 +20,7 @@ int _atoi(char *s)
 
 		if (end > 0 && s[i] == ' ')
 			break;
-		if (value > INT_MAX / 10 || (value == INT_MAX / 10 && s[i] - '0' > 7))
+		if (value >= INT_MAX / 10 || (value == INT_MAX / 10 && s[i] - '0' > 7))
 		{
 			if (sign == 1)
 				return (INT_MAX);
