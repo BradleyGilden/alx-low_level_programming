@@ -1,12 +1,30 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Return: 0 always
+ * rev_string - print string in reverse
+ * @s: input string
  */
 
-int main(void)
+void rev_string(char *s)
 {
-	return (0);
+	int counter = 0;
+	char *len = s;
+	char temp;
+	int i;
+
+	/*find length of string*/
+
+	while (*len != '\0')
+	{
+		counter++;
+		len += 1;
+	}
+
+	for (i = counter - 1; i >= counter / 2; i--)
+	{
+		temp = *(s + i);
+		*(s + i) = *(s + counter - i - 1);
+		*(s + counter - i - 1) = temp;
+	}
 }
