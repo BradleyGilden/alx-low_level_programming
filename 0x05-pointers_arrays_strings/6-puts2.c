@@ -1,12 +1,21 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Return: 0 always
+ * puts2 - print every other value
+ * @str: string input
  */
 
-int main(void)
+void puts2(char *str)
 {
-	return (0);
+	int length = 0, i = 0;
+
+	while (str[i++])
+		length++;
+
+	for (i = 0; i < length; i += 2)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
 }
