@@ -1,12 +1,22 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Return: 0 always
+ * print_array - print array seperated by commas
+ * @a: pointer to first element in array
+ * @n: array size
  */
 
-int main(void)
+void print_array(int *a, int n)
 {
-	return (0);
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		if (i == n - 1)
+			printf("%d", a[i]);
+		else
+			printf("%d, ", a[i]);
+	}
+	printf("\n");
 }
