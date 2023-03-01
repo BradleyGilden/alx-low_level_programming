@@ -2,12 +2,19 @@
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Return: 0 always
+ * reverse_array - reverse contents of array
+ * @a: pointer to int array
+ * @n: size of array
  */
 
-int main(void)
+void reverse_array(int *a, int n)
 {
-	return (0);
+	int i = 0, j = 0, temp = 0;
+
+	for (i = n - 1; i >= n / 2; i--)
+	{
+		temp = a[i];
+		a[i] = a[j];
+		a[j++] = temp;
+	}
 }
