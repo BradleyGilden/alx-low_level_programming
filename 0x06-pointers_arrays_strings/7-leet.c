@@ -2,12 +2,28 @@
 #include "main.h"
 
 /**
- * main - entry point
+ * leet - encode given string in 1337
+ * @str: input string
  *
- * Return: 0 always
+ * Return: the address of input string
  */
 
-int main(void)
+char *leet(char *str)
 {
-	return (0);
+	int i = 0, j = 0, len = 0;
+	int code[8] = {'O', 'L', '~', 'E', 'A', '~', '~', 'T'};
+
+	/*             0    1    2    3    4    5    6    7        */
+
+	while (str[i])
+	{
+		for (j = 0; j <= 7; j++)
+		{
+			if (code[j] == str[i] || code[j] + 32 == str[i])
+				str[i] = j + '0';
+		}
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
