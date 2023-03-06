@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _strspn - returns index of first character found
+ * _strspn - returns number of first set of matching characters
  *
  * @s: char array to be searched
  * @accept: string of bytes to be matched
