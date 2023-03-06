@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _strchr - number of bytes in 's', that match the bytes in 'accept'
+ * _strspn - number of bytes in 's', that match the bytes in 'accept'
  *			 including '\0' char
  * @s: char array to be searched
  * @accept: string of bytes to be matched
