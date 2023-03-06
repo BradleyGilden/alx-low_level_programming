@@ -1,12 +1,23 @@
+#include<stdio.h>
 #include "main.h"
 
 /**
- * main - entry point
+ * _memcpy - copy n bytes from src to dest
+ * @dest: character array to be filled
+ * @src: source char array that will be copied from
+ * @n: number chars to be copied
  *
- * Return: 0 always
+ * Return: character array to destination 'dest'
  */
 
-int main(void)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	return (0);
+	unsigned int i = 0;
+
+	for (i = 0; i < n; i++)
+	{
+		dest[i] = src[i];
+	}
+
+	return (dest);
 }
