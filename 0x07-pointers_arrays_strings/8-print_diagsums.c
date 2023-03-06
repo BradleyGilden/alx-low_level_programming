@@ -1,12 +1,25 @@
+#include<stdio.h>
 #include "main.h"
 
 /**
- * main - entry point
+ * print_diagsums - print chess board using 2d arrays
  *
- * Return: 0 always
+ * @a: multidimensional array that was casted as a 1-D array
+ * @size: size of columns of 2-D array " *a[size] "
+ *
+ * deduction: to traverse diagonals
+ *			  a[i++][i++] and a[j++][k--]
+ *			  assuming i = 0, j = 0, k = size - 1
  */
 
-int main(void)
+void print_diagsums(int *a, int size)
 {
-	return (0);
+	int i = 0, sum_d1 = 0, sum_d2 = 0, j = 0, k = size - 1;
+
+	for (; i < size; i++)
+	{
+		sum_d1 += *((a + i * size) + i);
+		sum_d2 += *((a + (j++) * size) + (k--));
+	}
+	printf("%d, %d\n", sum_d1, sum_d2);
 }
