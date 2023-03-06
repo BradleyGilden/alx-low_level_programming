@@ -12,7 +12,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i = 0, j = 0, count = 0, track = 0;
+	unsigned int i = 0, j = 0, count = 0;
 
 	for (; s[i]; i++)
 	{
