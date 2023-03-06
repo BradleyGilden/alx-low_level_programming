@@ -1,12 +1,29 @@
+#include<stdio.h>
 #include "main.h"
 
 /**
- * main - entry point
+ * _strpbrk - returns pointer to first byte from accept ...
+ *			  matched in string s;
  *
- * Return: 0 always
+ * @s: char array to be searched
+ * @accept: string of bytes to be matched
+ *
+ * Return: address of first byte matched
  */
 
-int main(void)
+char *_strpbrk(char *s, char *accept)
 {
-	return (0);
+	int i = 0, j = 0;
+
+	for (; s[i]; i++)
+	{
+		for (j = 0; accept[j]; j++)
+		{
+			if (s[i] == accept[j])
+			{
+				return (s + i);
+			}
+		}
+	}
+	return (NULL);
 }
