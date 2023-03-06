@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * _strspn - number of bytes in 's', that match the bytes in 'accept'
- *			 including '\0' char
+ * _strspn - returns index of first character found
+ *
  * @s: char array to be searched
  * @accept: string of bytes to be matched
  *
@@ -12,18 +12,20 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i = 0, j = 0;
+	unsigned int i = 0, j = 0, count = 0, track = 0;
 
-	while (accept[i])
+	for (; s[i]; i++)
 	{
-		for (j = 0; s[j]; j++)
+		for (j = 0; accept[j]; j++)
 		{
-			if (accept[i] == s[j])
+			if (s[i] == accept[j])
 			{
-				i++;
+				count += 1;
 			}
 		}
+		if (!(count > i))
+			break;
 	}
+	return (count);
 
-	return (i + 1);
 }
