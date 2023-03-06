@@ -2,7 +2,18 @@
 
  **This directory deals with uses of double pointers, multidimensional arrays and more string manipulation**
 
- **Notes :**
+ <h2>Hard Coded C functions:</h2>
+
+ to read more on these C function type: `man <function_name>`
+ 
+ - memset
+ - memcpy
+ - strchr
+ - strspn
+ - strbrk
+ - strstr
+
+<h2>Memory allocation of pointers</h2>
 
  ```c
  #include<stdio.h>
@@ -39,5 +50,4 @@
  sizoef(*pptr):  8
  sizeof(**pptr): 4
  ```
- **conclusion :** size of pointers and double pointers are the same.<br>
- when required to dereference to int, size of *ptr and **pptr = sizeof(int).
+ <p> <b>conclusion:</b> &nbsp&nbsp Size of pointers and double pointers are the same.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWhen required to dereference to int, size of *ptr and **pptr = sizeof(int).</p>
