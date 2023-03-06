@@ -3,7 +3,7 @@
 
 /**
  * _strchr - returns pointer to first occurence of char c
- * 			 if char c is not found then return NULL
+ *			 if char c is not found then return NULL
  * @s: char array to be searched
  * @c: char needed to search in char array
  *
