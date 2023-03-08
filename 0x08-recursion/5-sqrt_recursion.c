@@ -44,5 +44,5 @@ int compute_sqrt(int input, int root)
 	if (root * root > input)
 		return (-1);
 
-	compute_sqrt(input, root + 1);
+	return (compute_sqrt(input, root + 1));
 }
