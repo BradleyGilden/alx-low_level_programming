@@ -4,7 +4,7 @@
 /**
  * _print_rev_recursion - entry point
  * @s:input string
- * 
+ *
  * deduction: to reverse the string we must use head recursion
  *			  increment in function as long as *s != '\0'
  */
@@ -16,5 +16,4 @@ void _print_rev_recursion(char *s)
 		_print_rev_recursion(s + 1);
 		_putchar(*s);
 	}
-	return;
 }
