@@ -2,12 +2,23 @@
 #include "main.h"
 
 /**
- * main - entry point
+ * _puts_recursion - recursive function that imitates puts
+ * @s: string input
  *
- * Return: 0 always
+ * deduction: tail recursion to iterate string
+ *			  if s[i] == '\0' ... print newline
+ *			  else print s[i++]
  */
 
-int main(void)
+void _puts_recursion(char *s)
 {
-	return (0);
+	if (*s == '\0')
+	{
+		_putchar('\n');
+		return;
+	}
+
+	_putchar(*s);
+	s += 1;
+	_puts_recursion(s);
 }
