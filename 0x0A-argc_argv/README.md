@@ -1,7 +1,3 @@
-<style>
-	b{color: green;}
-</style>
-
 # cmd line arguments: argc, argv[]
 
 <h2>What is <b>argc</b>?</h2>
@@ -17,9 +13,14 @@
 
 <h2>Example of using argc & argv:</h2>
 
-```cat main.c```
+```powershell
+#terminal input
+
+cat main.c
+```
 
 ```C
+//terminal output
 int main(int argc, char *argv[])
 {
 	for(int i = 0; i < argc; i++)
@@ -29,11 +30,15 @@ int main(int argc, char *argv[])
 }
 ```
 
-```gcc main.c -o main```
+```powershell
+#terminal input
 
-```./main hello world```
-
+gcc main.c -o main
+./main hello world
 ```
+
+```powershell
+#terminal output
 argv[0]: ./main
 argv[1]: hello
 argv[2]: world
