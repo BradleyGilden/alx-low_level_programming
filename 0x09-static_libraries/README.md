@@ -16,3 +16,11 @@ gcc main.c -L. -ldemo # -l in -ldemo replaces the name 'lib'. -L. will link the 
 
 ./a.out  #we now have an executable linked to our function object files that we can run successfuly.
 ```
+<h2>Notable files in directory:</h2>
+
+- <files\>.c ----------- files containg C functions
+- <files\>.o ----------- are all object files of functions
+- main.c -------------- main C file
+- libmy.a ------------- archive file generated manually
+- liball.a -------------- archive file generated with script
+- create_static_lib.sh - script to create archive
