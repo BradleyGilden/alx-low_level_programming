@@ -3,25 +3,6 @@
 #include "main.h"
 
 /**
- * out_of_memory - creates a 2d integer array on heap...
- *
- * @grid: width of a grid (columns)
- * @height: height of grid (rows)
- *
- * Return: NULL
- */
-
-void *out_of_memory(int **grid, int height)
-{
-	int i;
-
-	for (i = 0; i < height; i++)
-		free(grid[i]);
-	free(grid);
-	return (NULL);
-}
-
-/**
  * alloc_grid - creates a 2d integer array on heap...
  *			    with predifined width and height, with all elements...
  *			    initialized to 0.
@@ -57,13 +38,19 @@ int **alloc_grid(int width, int height)
 	grid = (int **)malloc(height * sizeof(int *));
 
 	if (grid == NULL)
-		return (out_of_memory(grid, height));
+		return (NULL);
 
 	for (i = 0; i < height; i++)
 	{
-		*(grid + i) = (int *)malloc(width * sizeof(int));
-		if (*(grid + i) == NULL)
-			return (out_of_memory(grid, height));
+		grid[i] = (int *)malloc(width * sizeof(int));
+		if (grid[i] == NULL)
+		{
+			for (; i >= 0; i--)
+				free(grid[i]);
+
+			free(grid);
+			return (NULL);
+		}
 	}
 
 	for (i = 0; i < height; i++)
