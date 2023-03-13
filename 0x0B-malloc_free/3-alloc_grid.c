@@ -23,9 +23,9 @@
  *			  *(a + i) -> address at &a[i] or &a[i][0]
  *            a -> address of &a[0] or &a[0][0]
  *
- *			  declare memory for pointer to array of pointers: see line 34
+ *			  declare memory for pointer to array of pointers: see line 38
  *			  then for every pointer in the array declare memory for array:
- *			  see line 39
+ *			  see line 43
  */
 
 int **alloc_grid(int width, int height)
