@@ -24,15 +24,15 @@ char *_strdup(char *str)
 	char *cpystr;
 
 	if (str == NULL)
-		return(NULL);
+		return (NULL);
 
 	while (str[i++])
 		len++;
 
-	cpystr = (char*)malloc((len + 1) * sizeof(char));
+	cpystr = (char *)malloc((len + 1) * sizeof(char));
 
 	if (cpystr == NULL)
-		return(NULL);
+		return (NULL);
 
 	for (i = 0; i <= len; i++)
 		cpystr[i] = str[i];
