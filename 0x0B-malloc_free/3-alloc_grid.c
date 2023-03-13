@@ -13,6 +13,7 @@
  *
  * Return: return a pointer to a 2d array
  *		   NULL on failure to allocate memory
+ *		   if height or width <= 0
  *
  * deduction: create double pointer int **grid that points to an array of...
  *			  pointers, that point to an array of integers.
@@ -31,6 +32,9 @@ int **alloc_grid(int width, int height)
 {
 	int **grid, i, j;
 
+	if (width <= 0 || height <= 0)
+		return (NULL);
+
 	grid = (int **)malloc(height * sizeof(int *));
 
 	if (grid == NULL)
@@ -38,6 +42,12 @@ int **alloc_grid(int width, int height)
 
 	for (i = 0; i < height; i++)
 		*(grid + i) = (int *)malloc(width * sizeof(int));
+
+	for (i = 0; i < height; i++)
+	{
+		if (*(grid + i) == NULL)
+			return (NULL);
+	}
 
 	for (i = 0; i < height; i++)
 	{
