@@ -3,6 +3,25 @@
 #include "main.h"
 
 /**
+ * out_of_memory - creates a 2d integer array on heap...
+ *
+ * @grid: width of a grid (columns)
+ * @height: height of grid (rows)
+ *
+ * Return: NULL
+ */
+
+void *out_of_memory(int **grid, int height)
+{
+	int i;
+
+	for (i = 0; i < height; i++)
+		free(grid[i]);
+	free(grid);
+	return (NULL);
+}
+
+/**
  * alloc_grid - creates a 2d integer array on heap...
  *			    with predifined width and height, with all elements...
  *			    initialized to 0.
@@ -27,16 +46,6 @@
  *			  then for every pointer in the array declare memory for array:
  *			  see line 39
  */
-
-void *out_of_memory(int **grid, int height)
-{
-	int i;
-
-	for (i = 0; i < height; i++)
-		free(grid[i]);
-	free(grid);
-	return (NULL);
-}
 
 int **alloc_grid(int width, int height)
 {
@@ -64,40 +73,4 @@ int **alloc_grid(int width, int height)
 	}
 
 	return (grid);
-}
-
-void print_grid(int **grid, int width, int height)
-{
-    int w;
-    int h;
-
-    h = 0;
-    while (h < height)
-    {
-        w = 0;
-        while (w < width)
-        {
-            printf("%d ", grid[h][w]);
-            w++;
-        }
-        printf("\n");
-        h++;
-    }   
-}
-
-int main(void)
-{
-    int **grid;
-
-    grid = alloc_grid(6, 4);
-    if (grid == NULL)
-    {
-        return (1);
-    }
-    print_grid(grid, 6, 4);
-    printf("\n");
-    grid[0][3] = 98;
-    grid[3][4] = 402;
-    print_grid(grid, 6, 4);
-    return (0);
 }
