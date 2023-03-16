@@ -90,6 +90,8 @@ The exit command causes normal process termination.
 
 We can use exit(0) or exit(EXIT_SUCCESS) to indicate program has exited succesfully. Alternatively exit(1) or exit(EXIT_FAILURE) to indicate program has exited with failure. Any interger can be passed into exit() and the program will exit with that integer value.
 
+<br>
+
 ## Using Valgrind to detect memory leaks
 
 To install in your Ubuntu distrubiton: `sudo apt install valgrind`
