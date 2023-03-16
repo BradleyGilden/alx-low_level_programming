@@ -3,12 +3,30 @@
 #include "main.h"
 
 /**
- * main - entry point
+ * array_range - create an array of integers in a given range
+ * @min: minimum value in integer array
+ * @max: maximum value in integer array
  *
- * Return: 0 always
+ * Return: pointer to range of integers
+ *		   NULL if min > max
+ *		   NULL if malloc fails to allocate memory
  */
 
-int main(void)
+int *array_range(int min, int max)
 {
-	return (0);
+	int *range, i;
+
+	if (min > max)
+		return (NULL);
+
+	range = malloc(sizeof(*range) * (max - min + 1));
+	if (range == NULL)
+		return (NULL);
+
+	for (i = 0; range[i] <= max; i++)
+	{
+		range[i] = min++;
+	}
+
+	return (range);
 }
