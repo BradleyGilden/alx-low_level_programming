@@ -1,14 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "main.h"
 
 /**
- * main - entry point
+ * _calloc - allocates memory using malloc, initializes elements to 0
+ * @nmemb: number of elements of any data type
+ * @size: size of data type being allocated
  *
- * Return: 0 always
+ * Return: NULL if size == 0 || nmemb = 0
+ *		   NULL if malloc fails to allocate memory
+ *		   returning a pointer to the memory allocated on heap
  */
 
-int main(void)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	return (0);
+	unsigned int i;
+	char *ptr;
+
+	if (size == 0 || nmemb == 0)
+		return (NULL);
+
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+		return (NULL);
+
+	for (i = 0; i < nmemb; i++)
+		ptr[i] = 0;
+
+	return (ptr);
 }
