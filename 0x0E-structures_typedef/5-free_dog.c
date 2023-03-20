@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * new_dog - free struct dog
+ * free_dog - free struct dog
  * @d: struct to be freed
  */
 
