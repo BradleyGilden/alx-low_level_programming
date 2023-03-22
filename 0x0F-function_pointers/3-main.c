@@ -20,8 +20,8 @@ int main(int ac, char *av[])
 		exit(98);
 	}
 
-	op = av[2][0];
-	if (op != '+' && op != '-' && op != '*' && op != '/' && op != '%')
+	pfun = get_op_func(av[2]);
+	if (pfun == NULL)
 	{
 		printf("Error\n");
 		exit(99);
@@ -29,6 +29,7 @@ int main(int ac, char *av[])
 
 	num1 = atoi(av[1]);
 	num2 = atoi(av[3]);
+	op = av[2][0];
 
 	if ((op == '/' || op == '%') && (num2 == 0))
 	{
@@ -36,7 +37,6 @@ int main(int ac, char *av[])
 		exit(100);
 	}
 
-	pfun = get_op_func(av[2]);
 	result = pfun(num1, num2);
 	printf("%d\n", result);
 
