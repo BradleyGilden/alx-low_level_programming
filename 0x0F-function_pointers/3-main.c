@@ -11,7 +11,7 @@
 
 int main(int ac, char *av[])
 {
-	int num1 = 0, num2 = 0, result = 0;
+	int num1 = 0, num2 = 0, result = 0, (*pfun)(int, int);
 	char op;
 
 	if (ac != 4)
@@ -36,7 +36,8 @@ int main(int ac, char *av[])
 		exit(100);
 	}
 
-	result = get_op_func(av[2])(num1, num2);
+	pfun = get_op_func(av[2]);
+	result = pfun(num1, num2);
 	printf("%d\n", result);
 
 	return (0);
