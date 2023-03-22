@@ -30,7 +30,7 @@ int main(int ac, char *av[])
 	}
 
 	arr = (char *)main;
-	
+
 	for (i = 0; i < bytes; i++)
 	{
 		if (i == bytes - 1)
@@ -40,6 +40,6 @@ int main(int ac, char *av[])
 		}
 		printf("%02hhx ", arr[i]);
 	}
-	
+
 	return (0);
 }
