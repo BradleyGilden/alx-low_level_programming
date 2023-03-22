@@ -4,21 +4,21 @@ Function pointers in C can be used to create function calls to which they point.
 
 ## List of Contents
 1. Section 1
-   * function_pointers.h - header file that contains function prototypes of the C files `[0-2]*.c`
-   * 0-print_name.c - a function that prints a name
-   * 1-array_iterator.c - a function that executes a function given as a parameter on each element of an array
-   * 2-int_index.c -  a function that searches for an integer
+   * [function_pointers.h](function_pointers.h) - header file that contains function prototypes of the C files `[0-2]*.c`
+   * [0-print_name.c](0-print_name.c) - a function that prints a name
+   * [1-array_iterator.c](1-array_iterator.c) - a function that executes a function given as a parameter on each element of an array
+   * [2-int_index.c](2-int_index.c) -  a function that searches for an integer
 2. Section 2
-   * 3-calc.h - header file that contains structs and function prototypes of the C files `3*.c`
-   * 3-op_functions.c - contains functions that return a result of sum depending on the call from `get_op_func(char *s)(int, int)` in the main function
-   * 3-get_op_func.c - contains the function that selects the correct function (from `3-op_functions.c`) to perform the operation that was placed in the function arguments e.g:
+   * [3-calc.h](3-calc.h) - header file that contains structs and function prototypes of the C files `3*.c`
+   * [3-op_functions.c](3-op_functions.c) - contains functions that return a result of sum depending on the call from `get_op_func(char *s)(int, int)` in the [main function](3-main.c)
+   * [3-get_op_func.c](3-get_op_func.c) - contains the function that selects the correct function (from `3-op_functions.c`) to perform the operation that was placed in the function arguments e.g:
      ```powershell
 	 ./calc 5 '*' 3
 	 ```
 	 ```C
 	 result = get_op_func("*")(num1, num2) //inside main function
 	 ```
-   * 3-main.c - takes in the programs arguments and manipulates them to call the correct operation. If the arguments are incorrectly formatted, the program will exit with an error e.g:
+   * [3-main.c](3-main.c) - takes in the programs arguments and manipulates them to call the correct operation. If the arguments are incorrectly formatted, the program will exit with an error e.g:
      ```powershell
 	 ./calc 10 '+' 2
 	 12
