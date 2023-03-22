@@ -27,6 +27,13 @@ Function pointers in C can be used to create function calls to which they point.
 	 ./calc 10 '$' 2
 	 Error
      ```
+3. Avanced Section
+   * [100-main_opcodes.c](100-main_opcodes.c) - print out the assembly opcodes of the main function. Usage:
+     ```powershell
+	 gcc 100-main_opcodes.c -o main
+	 ./main 5
+	 09 0f e7 11 a7
+	 ```
 
 <br>
 
