@@ -36,10 +36,10 @@ in order to utllizie variadic functions we must include the `<stdarg.h>` header 
 
 | Methods | Description |
 | :------ | :---------- |
-| `va_start(va_list arg, argN)` | This function enables access to variable function arguments<br><br>`va_list` - is a pointer to the last fixed argument in the list.<br>`argN` - the last fixed argument in the list<br><br>Therefore in this example `va_list arg` is a pointer to argN|
-| `va_arg(va_list arg, type)` | This function access the next argument<br><br>`type` - this indicates the data type `va_list arg` should expect (how many bytes it should read for a particular data type). |
+| `va_start(va_list argP, argN)` | This function enables access to variable function arguments<br><br>`va_list` - is a pointer to the last fixed argument in the list.<br>`argN` - the last fixed argument in the list<br><br>Therefore in this example `va_list argP` is a pointer to argN|
+| `va_arg(va_list argP, type)` | This function access the next argument<br><br>`type` - this indicates the data type `va_list argP` should expect (how many bytes it should read for a particular data type). |
 | `va_copy(va_list dest, va_list src)` | This function makes a copy of the variadic function arguments |
-| `va_end(va_list ap)` | This ends the traversal of the variadic function arguments |
+| `va_end(va_list argP)` | This ends the traversal of the variadic function arguments |
 
 ### The `const` keyword:
 
