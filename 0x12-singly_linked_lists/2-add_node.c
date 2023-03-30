@@ -29,8 +29,12 @@ int _strlen(char *str)
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *beginning = malloc(sizeof(list_t));
+	list_t *beginning;
 
+	if (str == NULL)
+		return (NULL);
+
+	beginning = malloc(sizeof(list_t));
 	if (beginning == NULL)
 		return (NULL);
 
