@@ -6,7 +6,7 @@
  *
  * @h: the head node of type list_t
  *
- * Return: 
+ * Return: the number of nodes within a list
  */
 
 size_t print_list(const list_t *h)
