@@ -14,6 +14,9 @@ int pop_listint(listint_t **head)
 	listint_t *nxt_ptr = *head;
 	int deleted_data = 0;
 
+	if (*head == NULL)
+		return (0);
+
 	nxt_ptr = nxt_ptr->next;
 	*head = nxt_ptr;
 
