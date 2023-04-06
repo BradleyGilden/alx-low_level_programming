@@ -10,7 +10,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0, num = 0x00, to_bin = 0;
+	unsigned int i = 0, num = 0x00;
 	int tracker = 0;
 
 	if (b == NULL)
