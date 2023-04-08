@@ -17,7 +17,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int FD = 0;
-	ssize_t letter_count = sizeof(char) * letters;
+	size_t letter_count = sizeof(char) * letters;
 	ssize_t bytes_read = 0, bytes_written = 0;
 	char *buffer;
 
