@@ -28,8 +28,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	buffer = malloc(letter_count);
-		if (buffer == NULL)
-			return (0);
+	if (buffer == NULL)
+		return (0);
 
 	bytes_read = read(FD, buffer, letter_count);
 	if (bytes_read < 0)
