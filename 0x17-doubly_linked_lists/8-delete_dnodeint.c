@@ -19,7 +19,7 @@ int delete_beginning(dlistint_t **head)
 /**
  * delete_dnodeint_at_index - delete node at specific index
  * @head: pointer to head node
- * index: position of node to be deleted
+ * @index: position of node to be deleted
  * Return: 1 if succeed, -1 if failed
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
