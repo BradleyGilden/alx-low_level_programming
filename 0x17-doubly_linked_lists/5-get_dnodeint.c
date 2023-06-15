@@ -1,28 +1,22 @@
 #include "lists.h"
 
 /**
- * main - check the code
- *
- * Return: Always EXIT_SUCCESS.
+ * get_dnodeint_at_index - get node at index in doubly linked list
+ * @head: pointer to head node
+ * @index: index value starting at 0
+ * Return: node at index
  */
-int main(void)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-    dlistint_t *head;
-    dlistint_t *node;
+	unsigned int count = 0;
 
-    head = NULL;
-    add_dnodeint_end(&head, 0);
-    add_dnodeint_end(&head, 1);
-    add_dnodeint_end(&head, 2);
-    add_dnodeint_end(&head, 3);
-    add_dnodeint_end(&head, 4);
-    add_dnodeint_end(&head, 98);
-    add_dnodeint_end(&head, 402);
-    add_dnodeint_end(&head, 1024);
-    print_dlistint(head);
-    node = get_dnodeint_at_index(head, 5);
-    printf("%d\n", node->n);
-    free_dlistint(head);
-    head = NULL;
-    return (EXIT_SUCCESS);
+	while (head != NULL)
+	{
+		if (count == index)
+			return (head);
+		head = head->next;
+		count++;
+	}
+
+	return (NULL);
 }
