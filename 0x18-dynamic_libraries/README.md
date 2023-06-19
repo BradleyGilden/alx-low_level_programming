@@ -81,7 +81,7 @@ $ ldd /bin/ls
 `ldconfig` - configure dynamic linker run-time bindings. Creates necessary links and updates cache for the most recent shared libraries found in directories specified by the command line.
 
 ```
-sudo ldconfig -n /path/to/library/directory
+sudo ldconfig
 ```
 <br>
 
@@ -125,10 +125,34 @@ int add(int a, int b)
 
 int main(void)
 {
-    printf("%d\n", add(2, 5))
+    printf("%d\n", add(2, 5));
+    return (0);
 }
 ```
 \
         </td>
     </tr>
 </table>
+
+* step1: compile  source code into object files using `-c`, and `-fPIC`(Position independent Code), which is required to create position independent code that can be used in a shared library
+
+  ```Powershell
+  gcc -c -fPIC add.c -o add.o
+  ```
+
+* step2: Created a Dynamic library, the `-shared` flag tells the compiler that it is a dynamic library
+
+  ``` Powershell
+  gcc -shared add.o -o libadd.so
+  ```
+
+* step3: making the library accessible. You can do so by setting the environment variable `LD_LIBRARY_PATH`, other methods include copying library to system directories like `/usr/local/lib` or update systems cache using `sudo ldconfig`
+
+  ```Powershell
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.
+  ```
+
+* step4: compile the program and link it with the dynamic library. The `-L` flag tells the linker to search for libraries in a specific directory, in this case it's the current directory. `-ladd` links against the libadd.so library. 
+  ```Powershell
+  gcc main.c -o program -L. -ladd
+  ```
