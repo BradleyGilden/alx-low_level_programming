@@ -7,7 +7,10 @@ A library is basically just a file that contains data or instructions that progr
 
 ## Directory Files
 
-
+* [1-create_dynamic_lib.sh](1-create_dynamic_lib.sh) - script to create dynamic library
+* [main.h](main.h) - header file of compiled code
+* [100-operations.so](100-operations.so) - dynamic library of calculator code
+* [libdynamic.so](libdynamic.so) - dynamic library of custom C library
 
 <br>
 
