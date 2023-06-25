@@ -13,9 +13,19 @@ Node 1          Node 2          Node 3
 ```
 **The first and last nodes in a doubly linked list are called the head and tail, respectively. In a doubly linked list, you can traverse the list in both forward and backward directions because each node has pointers to both the next and previous nodes.**
 <br>
-<br>
+
 ## Directory Files
 
+* [lists.h](lists.h) - header file for directory
+* [0-print_dlistint.c](0-print_dlistint.c) - a function to print a doubly linked list
+* [1-dlistint_len.c](1-dlistint_len.c) - a function that computes length of doubly linked list
+* [2-add_dnodeint.c ](2-add_dnodeint.c ) - a function that adds node at the beginning of doubly linked list
+* [3-add_dnodeint_end.c](3-add_dnodeint_end.c) - a function that adds node at the end of doubly linked list
+* [4-free_dlistint.c](4-free_dlistint.c) - a function that frees a doubly linked list
+* [5-get_dnodeint.c](5-get_dnodeint.c) - a function that returns node at index 
+* [6-sum_dlistint.c](6-sum_dlistint.c) - a function that computes the sum of the data in a doubly linked list
+* [7-insert_dnodeint.c](7-insert_dnodeint.c) - a function that iserts node at index of doubly linked list
+* [8-delete_dnodeint.c](8-delete_dnodeint.c) - a function that deletes node at index of doubly linked list
 
 ## Doubly Linked List uses:
 
