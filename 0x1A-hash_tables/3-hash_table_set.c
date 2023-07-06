@@ -1,6 +1,11 @@
 #include "hash_tables.h"
 
-
+/**
+ * build_node - creates hash node with desired key and value
+ * @key: key used to access value
+ * @value: data stored in hash node
+ * Return: the built node or NULL if fails.
+ */
 hash_node_t *build_node(const char *key, const char *value)
 {
 	hash_node_t *item = NULL;
@@ -19,6 +24,13 @@ hash_node_t *build_node(const char *key, const char *value)
 	return (item);
 }
 
+/**
+ * hash_table_set - inserts hasnode into table slot or chain
+ * @ht: pointer to hash table struct
+ * @key: key used to access value
+ * @value: data stored in hash node
+ * Return: the built node or NULL if fails.
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *item = NULL;
@@ -35,7 +47,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht->array[h_index] == NULL)
 		ht->array[h_index] = item;
-	else 
+	else
 	{
 		/*ht->array[h_index] is techincally the head*/
 		item->next = ht->array[h_index];
