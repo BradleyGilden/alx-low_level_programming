@@ -12,14 +12,19 @@ hash_node_t *build_node(const char *key, char *copy)
 
 	item = malloc(sizeof(hash_node_t));
 	if (item == NULL)
+	{
+		free(copy);
 		return (NULL);
+	}
+
 	item->key = strdup(key);
-	item->value = copy;
 	if (item->key == NULL)
 	{
+		free(copy);
 		free(item);
 		return (NULL);
 	}
+	item->value = copy;
 	item->next = NULL;
 	return (item);
 }
@@ -66,7 +71,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		/*ht->array[h_index] is techincally the head*/
 		item->next = ht->array[h_index];
-		ht->array[h_index]->next = NULL;
 		ht->array[h_index] = item;
 	}
 
