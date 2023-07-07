@@ -17,13 +17,7 @@ hash_node_t *build_node(const char *key, char *copy)
 		return (NULL);
 	}
 
-	item->key = strdup(key);
-	if (item->key == NULL)
-	{
-		free(copy);
-		free(item);
-		return (NULL);
-	}
+	item->key = (char *)key;
 	item->value = copy;
 	item->next = NULL;
 	return (item);
