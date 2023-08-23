@@ -4,7 +4,6 @@ SRC = main.c school.c
 CC = gcc
 OBJ = $(SRC:.c=.o)
 NAME = school
-RM = rm
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # allows execution even if files do not exist
