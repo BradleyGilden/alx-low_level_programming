@@ -18,3 +18,4 @@ A Makefile is a text file used to specify a set of rules and instructions for bu
 * [1-Makefile](1-Makefile) - improves makefile by adding variables for compiler and source files
 * [2-Makefile](2-Makefile) - recompiles object files if source files change
 * [3-Makefile](3-Makefile) - added rules: clean, oclean, fclean and re
+* [4-Makefile](4-Makefile) - Completes makefile by adding compilation flags
