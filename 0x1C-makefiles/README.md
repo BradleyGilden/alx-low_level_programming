@@ -13,3 +13,5 @@ A Makefile is a text file used to specify a set of rules and instructions for bu
 <hr>
 
 ## Directory Files
+
+* [0-Makefile](0-Makefile) - creates an executable from a main.c and school.c file using `gcc`
