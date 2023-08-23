@@ -17,16 +17,27 @@ def island_perimeter(grid):
         for c in range(colen):
             if grid[r][c] == 1:
                 # check top of block
-                if r-1 == -1 or (r-1 >= 0 and grid[r-1][c] == 0):
+                if r-1 == -1 or grid[r-1][c] == 0:
                     perimeter += 1
                 # check the bottom
-                if r+1 == rowlen or (r+1 <= rowlen-1 and grid[r+1][c] == 0):
+                if r+1 == rowlen or grid[r+1][c] == 0:
                     perimeter += 1
                 # check left side
-                if c-1 == -1 or (c-1 >= 0 and grid[r][c-1] == 0):
+                if c-1 == -1 or grid[r][c-1] == 0:
                     perimeter += 1
                 # check right side
-                if c+1 == colen or (c+1 <= colen-1 and grid[r][c+1] == 0):
+                if c+1 == colen or grid[r][c+1] == 0:
                     perimeter += 1
 
     return perimeter
+
+
+if __name__ == "__main__":
+    grid = [
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 1, 1, 0, 0, 0],
+        [0, 1, 1, 0, 0, 0],
+        [0, 1, 0, 0, 0, 0]
+    ]
+    print(island_perimeter(grid))
