@@ -1,0 +1,26 @@
+# Declaring variables
+
+SRC = main.c school.c
+CC = gcc
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm
+
+# all rule builds executable
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# clean rule deletes Emacs and Vim temp files
+clean:
+	$(RM) -f *~
+
+# removes object files
+oclean:
+	$(RM) -f $(OBJ)
+
+# removes temp, object and executable files
+fclean:
+	$(RM) -f *~ $(OBJ) $(NAME)
+
+# forcefully recompile all object files
+re: oclean all
