@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "school.h"
+#include "m.h"
 
 /**
  * main - entry point
