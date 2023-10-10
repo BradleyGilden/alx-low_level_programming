@@ -26,14 +26,15 @@ void print_array_exp(int *array, size_t start, size_t end)
 /**
  * binary_search_exp - Searches specified element of {value} in a sorted array
  * @array: pointer to array to search
- * @size: size of the array to search
+ * @start: index to start searching
+ * @end: index to stop searching
  * @value: value inside the array to search
  *
  * Return: The first index of where the value is located else if not found -1
  */
-int binary_search_exp(int *array, size_t size, int value)
+int binary_search_exp(int *array, size_t start, size_t end, int value)
 {
-	size_t mid, start = 0, end = size - 1;
+	size_t mid;
 
 	if (array == NULL)
 		return (-1);
@@ -42,7 +43,7 @@ int binary_search_exp(int *array, size_t size, int value)
 	{
 		mid = (start + end) / 2;
 
-		print_array(array, start, end);
+		print_array_exp(array, start, end);
 
 		if (array[mid] == value)
 			return (mid);
@@ -65,23 +66,30 @@ int binary_search_exp(int *array, size_t size, int value)
  */
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t p1 = 1, p2 = 1;
-	char found = false;
+	size_t p1 = 1, p2 = 2;
 
 	if (array == NULL)
 		return (-1);
 
 	if (array[0] == value)
 	{
-		printf("Value checked array[0] = [%d]", array[0]);
+		printf("Value checked array[0] = [%d]\n", array[0]);
 		return (0);
 	}
 
-	while (!found)
+	while (true)
 	{
-		printf("Value checked array[%lu] = [%d]", p1, p2);
+		printf("Value checked array[%lu] = [%d]\n", p1, array[p1]);
 		if (array[p1] == value)
+			return (p1);
+		else if (array[p1] < value && (p2 >= size || value < array[p2]))
+		{
+			printf("Value found between indexes [%lu] and [%lu]", p1,
+				   MIN(p2, size - 1));
+			return (binary_search_exp(array, p1, MIN(p2, size - 1), value));
+		}
+		p1 += p1;
+		p2 += p2;
 	}
-
-
+	return (-1);
 }
