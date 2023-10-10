@@ -5,11 +5,11 @@ Searching Algorithms are designed to check for an element or retrieve an element
 <p align="center"><img src="./imgs/complexity.jpg" width=700></p>
 
 ## Directory Files:
-* [0-linear.c](0-linear.c) - implementation of linear search
-* [1-binary.c](1-binary.c) - implementation of binary search
 * [search_algos.h](search_algos.h) - header files for all the functions in the directory
 * [mains](mains) - contains main methods to test questions
 * [output](output) - directory that contains all the executable tests for mains
+* [0-linear.c](0-linear.c) - implementation of linear search
+* [1-binary.c](1-binary.c) - implementation of binary search
 * [2-O](2-O) - the time complexity (worst case) of a linear search in an array of size n
 * [3-O](3-O) - the space complexity (worst case) of an iterative linear search algorithm in an array of size n
 * [4-O](4-O) - the time complexity (worst case) of a binary search in an array of size n
